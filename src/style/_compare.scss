@@ -1,0 +1,281 @@
+.compare {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    &.empty-cart {
+        .compare__container {
+            display: none;
+        }
+
+        .empty {
+            display: block;
+        }
+    }
+
+    &__title-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 110%;
+        color: $dark;
+    }
+
+    &__delete-all {
+        @include center;
+        border-radius: 10px;
+        min-height: 52px;
+        padding: 5px 25px 5px 30px;
+        border: none;
+        background-color: $lightGrey;
+        border-radius: 10px;
+        transition: .3s;
+
+        span {
+            position: relative;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 110%;
+            color: $primary;
+            margin-left: 15px;
+            transition: .3s;
+        }
+
+        path,
+        rect,
+        span {
+            transition: .3s;
+        }
+
+        &:hover,
+        &:focus {
+            transition: .3s;
+            background-color: $primary;
+
+            rect {
+                transition: .3s;
+                fill: $white;
+                stroke: $white;
+            }
+
+            .fill-hover {
+                fill: $primary;
+            }
+
+            .stroke-hover {
+                transition: .3s;
+                stroke: $white;
+            }
+
+            span {
+                transition: .3s;
+                color: $white;
+            }
+        }
+
+        &:active {
+            transform: scale(.98);
+            opacity: .5;
+            transition: .3s;
+        }
+    }
+
+    &__filter {
+        max-width: 262px;
+        width: 100%;
+    }
+
+    &__cards-wrap {
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    &__field-wrap {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+
+        label {
+            font-size: 16px;
+            line-height: 110%;
+            color: $grey;
+            padding-left: 30px;
+            position: relative;
+            margin-right: 5px;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                border: 1px solid $borderGrey;
+                border-radius: 50%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 6px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $blue;
+                opacity: 0;
+            }
+        }
+
+        output {
+            color: $blue;
+        }
+
+        input:checked + label {
+            color: $dark;
+
+            &::before {
+                border: 2px solid $blue;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__items-container {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 30px;
+        cursor: auto;
+    }
+
+    &__items-wrapper {
+        transition: all .5s ease-out;
+    }
+
+    &__scrollbar {
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    &__differences {
+        margin-bottom: 40px;
+        label {
+            font-size: 16px;
+            line-height: 110%;
+            color: $dark;
+            padding-left: 32px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border: 1px solid $borderGrey;
+                border-radius: 4px;
+                background-color: $white;
+                transition: .3s;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 25%;
+                left: 6px;
+                width: 9px;
+                height: 5px;
+                border-top: 2px solid $white;
+                border-right: 2px solid $white;
+                transform: rotate(135deg);
+                opacity: 0;
+                transition: .3s;
+            }
+        }
+
+        input:checked + label {
+            &::before {
+                background-color: $blue;
+                border-color: $blue;
+                transition: .3s;
+            }
+
+            &::after {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+    }
+
+    .swiper-horizontal > .swiper-scrollbar {
+        height: 8px;
+    }
+
+    .swiper-scrollbar-drag {
+        border-radius: 2px;
+        background: $borderGrey;
+    }
+}
+
+@media (max-width: 1280px) {
+    .compare {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .compare {
+        &__filter {
+            display: none;
+        }
+
+        &__title-wrap {
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__delete-all {
+            min-height: auto;
+            padding: 0;
+            padding-bottom: 4px;
+            background-color: transparent;
+
+            span {
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+
+            svg {
+                display: none;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+
+                span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

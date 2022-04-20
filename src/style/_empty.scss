@@ -1,0 +1,40 @@
+.empty {
+    display: none;
+
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 110%;
+        color: $dark;
+    }
+
+    &__wrapper {
+        max-width: 400px;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__sub-title {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 110%;
+        text-align: center;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: $darkGrey;
+    }
+
+    img {
+        display: inline-block;
+        margin-bottom: -3px;
+    }
+}

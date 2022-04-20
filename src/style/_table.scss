@@ -1,0 +1,163 @@
+.table {
+    display: flex;
+
+    &__stats {
+        position: relative;
+        transition: .5s;
+
+        &.pin {
+            position: absolute;
+            top: 0;
+            transition: .5s;
+            z-index: 10;
+        }
+    }
+
+    &__head {
+        margin-left: -14px;
+
+        table {
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__scroll-wrap {
+        transition: all .5s ease-out;
+    }
+
+    &__scroll {
+        overflow: hidden;
+
+        .swiper-slide {
+            box-sizing: border-box;
+            width: 185px;
+        }
+    }
+
+    th {
+        padding: 0;
+        padding-left: 14px;
+        height: 50px;
+        text-align: start;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        color: $dark;
+        display: flex;
+        align-items: center;
+        transition: .3s;
+
+        &.hidden {
+            opacity: 0;
+        }
+
+        div {
+            overflow: hidden;
+        }
+    }
+
+    td {
+        padding: 0;
+        display: block;
+    }
+
+    &__head tr {
+        display: block;
+        transition: .3s;
+        max-height: 50px;
+
+        &.hidden {
+            opacity: 0;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            min-height: 48px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            overflow: hidden;
+            padding-left: 14px;
+            background-color: $lightGrey;
+        }
+
+        &:nth-of-type(2n) span {
+            background-color: $white;
+        }
+    }
+
+    .swiper-slide {
+        &:last-of-type {
+            span {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+
+    &__col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &__scroll tr {
+        display: block;
+        max-height: 48px;
+        transition: .3s;
+
+        &.hidden {
+            opacity: 0;
+        }
+
+        span {
+            background-color: $lightGrey;
+            display: flex;
+            align-items: center;
+            min-height: 48px;
+            overflow: hidden;
+            padding-left: 14px;
+        }
+
+        &:nth-of-type(2n) span {
+            background-color: $white;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+
+        &__head {
+            display: none;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        thead {
+            display: block;
+            height: 0;
+
+            tr,
+            th {
+                display: block;
+                height: 0;
+            }
+        }
+
+        &__col {
+            margin-bottom: 0;
+        }
+    }
+
+    .swiper-slide {
+        &:first-of-type {
+            span {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    min-width: 370px;
+    color: $dark;
+    background-color: $white;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
