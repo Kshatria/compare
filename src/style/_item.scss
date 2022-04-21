@@ -66,9 +66,7 @@
     }
 
     &__price {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 110%;
+        @include subTitle;
         color: $dark;
         margin-bottom: 6px;
     }
@@ -166,9 +164,7 @@
         }
 
         .item__not-available {
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 110%;
+            @include subTitle;
             color: $grey;
             margin-bottom: 12px;
         }

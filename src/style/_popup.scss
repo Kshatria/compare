@@ -88,9 +88,7 @@
         flex-grow: 1;
         border: 2px solid transparent;
 
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 110%;
+        @include boldText;
         color: $primary;
         transition: .3s;
 

@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: $regular;
     min-width: 370px;
     color: $dark;
     background-color: $white;
@@ -43,10 +43,4 @@ input {
     outline: none;
     border: 1px solid transparent;
     border-radius: 5px;
-}
-
-@mixin center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
