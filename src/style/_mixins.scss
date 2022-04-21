@@ -1,0 +1,23 @@
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+}
+
+@mixin subTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+}
+
+@mixin boldText {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 110%;
+}

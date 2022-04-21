@@ -20,9 +20,7 @@
     }
 
     &__title {
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 110%;
+        @include title;
         color: $dark;
     }
 
@@ -38,9 +36,7 @@
 
         span {
             position: relative;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 110%;
+            @include boldText;
             color: $primary;
             margin-left: 15px;
             transition: .3s;

@@ -2,9 +2,7 @@
     display: none;
 
     &__title {
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 110%;
+        @include title;
         color: $dark;
     }
 
